@@ -70,12 +70,7 @@ export const productCategories = [
     description: "Kệ 3 tầng đa năng, lắp ráp dễ dàng, chịu lực tốt, phù hợp lưu trữ đồ dùng gia đình và văn phòng.",
     image: "/images/KeDaNang.png",
   },
-  {
-    id: "sunshade",
-    name: "Lưới che nắng dệt kim cao cấp",
-    description: "Lưới che nắng dệt kim chất lượng cao, độ bền vượt trội, phù hợp cho nhà ở, sân vườn và công trình.",
-    image: "/images/LuoiCheNang.png",
-  },
+
   {
     id: "pump",
     name: "Máy bơm lốp xe cầm tay",
