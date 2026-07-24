@@ -3,16 +3,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
-  { src: "/src/assets/images/slide-1.png", mobileSrc: "/src/assets/images/slide-mobile-1.png", alt: "Toàn cảnh dây chuyền sản xuất tại Xưởng Gia Dụng Thiên Phát" },
-  { src: "/src/assets/images/slide-2.png", mobileSrc: "/src/assets/images/slide-mobile-2.png", alt: "Khu vực gia công sản phẩm gia dụng" },
-  { src: "/src/assets/images/slide-3.png", mobileSrc: "/src/assets/images/slide-mobile-3.png", alt: "Dây chuyền sản xuất và công nhân vận hành máy móc" },
-  { src: "/src/assets/images/slide-4.png", mobileSrc: "/src/assets/images/slide-mobile-4.png", alt: "Khu vực lắp ráp và hoàn thiện sản phẩm" },
-  { src: "/src/assets/images/slide-5.png", mobileSrc: "/src/assets/images/slide-mobile-5.png", alt: "Công nhân kiểm tra chất lượng sản phẩm" },
-  { src: "/src/assets/images/slide-6.png", mobileSrc: "/src/assets/images/slide-mobile-6.png", alt: "Khu vực đóng gói thành phẩm" },
-  { src: "/src/assets/images/slide-7.png", mobileSrc: "/src/assets/images/slide-mobile-7.png", alt: "Máy móc và thiết bị sản xuất hiện đại" },
-  { src: "/src/assets/images/slide-8.png", mobileSrc: "/src/assets/images/slide-mobile-8.png", alt: "Nguyên vật liệu được sắp xếp trong kho xưởng" },
-  { src: "/src/assets/images/slide-9.png", mobileSrc: "/src/assets/images/slide-mobile-9.png", alt: "Thành phẩm gia dụng trước khi xuất xưởng" },
-  { src: "/src/assets/images/slide-10.png", mobileSrc: "/src/assets/images/slide-mobile-10.png", alt: "Toàn cảnh khu vực sản xuất và đóng gói" },
+  { src: "/images/slide-1.png", mobileSrc: "/images/slide-mobile-1.png", alt: "Toàn cảnh dây chuyền sản xuất tại Xưởng Gia Dụng Thiên Phát" },
+  { src: "/images/slide-2.png", mobileSrc: "/images/slide-mobile-2.png", alt: "Khu vực gia công sản phẩm gia dụng" },
+  { src: "/images/slide-3.png", mobileSrc: "/images/slide-mobile-3.png", alt: "Dây chuyền sản xuất và công nhân vận hành máy móc" },
+  { src: "/images/slide-4.png", mobileSrc: "/images/slide-mobile-4.png", alt: "Khu vực lắp ráp và hoàn thiện sản phẩm" },
+  { src: "/images/slide-5.png", mobileSrc: "/images/slide-mobile-5.png", alt: "Công nhân kiểm tra chất lượng sản phẩm" },
+  { src: "/images/slide-6.png", mobileSrc: "/images/slide-mobile-6.png", alt: "Khu vực đóng gói thành phẩm" },
+  { src: "/images/slide-7.png", mobileSrc: "/images/slide-mobile-7.png", alt: "Máy móc và thiết bị sản xuất hiện đại" },
+  { src: "/images/slide-8.png", mobileSrc: "/images/slide-mobile-8.png", alt: "Nguyên vật liệu được sắp xếp trong kho xưởng" },
+  { src: "/images/slide-9.png", mobileSrc: "/images/slide-mobile-9.png", alt: "Thành phẩm gia dụng trước khi xuất xưởng" },
+  { src: "/images/slide-10.png", mobileSrc: "/images/slide-mobile-10.png", alt: "Toàn cảnh khu vực sản xuất và đóng gói" },
 ];
 
 export default function HeroSection() {

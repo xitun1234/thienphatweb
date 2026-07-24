@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <rect width="1200" height="800" fill="#d5d3cc"/>
+  <rect x="100" y="280" width="1000" height="240" rx="12" fill="#c4c2ba"/>
+  <text x="600" y="390" text-anchor="middle" fill="#8b8b8b" font-family="Inter, sans-serif" font-size="48" font-weight="300">Ảnh nhà xưởng — Hero</text>
+  <text x="600" y="440" text-anchor="middle" fill="#a8a6a0" font-family="Inter, sans-serif" font-size="20">Thay bằng ảnh thật: factory-hero.webp</text>
+  <text x="600" y="470" text-anchor="middle" fill="#c4c2ba" font-family="Inter, sans-serif" font-size="14">Kích thước đề xuất: 1440×960px</text>
+</svg>

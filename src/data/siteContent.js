@@ -49,50 +49,50 @@ export const productCategories = [
     id: "garden",
     name: "Dụng cụ làm vườn",
     description: "Dụng cụ làm vườn cơ bản và chuyên dụng, sản xuất từ vật liệu chịu được điều kiện ngoài trời.",
-    image: "/src/assets/images/DungCuLamVuon.png",
+    image: "/images/DungCuLamVuon.png",
     large: true,
   },
   {
     id: "pu-bag-black",
     name: "Túi da PU đen",
     description: "Túi da PU cao cấp màu đen, thiết kế tinh tế, chất liệu bền đẹp phù hợp nhiều mục đích sử dụng.",
-    image: "/src/assets/images/TuiDaPU-Den.png",
+    image: "/images/TuiDaPU-Den.png",
   },
   {
     id: "pu-bag-brown",
     name: "Túi da PU nâu",
     description: "Túi da PU màu nâu sang trọng, đường may chắc chắn, phù hợp làm quà tặng và sử dụng hàng ngày.",
-    image: "/src/assets/images/TuiDaPU-Nau.png",
+    image: "/images/TuiDaPU-Nau.png",
   },
   {
     id: "shelf",
     name: "Kệ 3 tầng đa năng",
     description: "Kệ 3 tầng đa năng, lắp ráp dễ dàng, chịu lực tốt, phù hợp lưu trữ đồ dùng gia đình và văn phòng.",
-    image: "/src/assets/images/KeDaNang.png",
+    image: "/images/KeDaNang.png",
   },
   {
     id: "sunshade",
     name: "Lưới che nắng dệt kim cao cấp",
     description: "Lưới che nắng dệt kim chất lượng cao, độ bền vượt trội, phù hợp cho nhà ở, sân vườn và công trình.",
-    image: "/src/assets/images/LuoiCheNang.png",
+    image: "/images/LuoiCheNang.png",
   },
   {
     id: "pump",
     name: "Máy bơm lốp xe cầm tay",
     description: "Máy bơm lốp cầm tay nhỏ gọn, vận hành nhanh, tiện lợi cho xe máy, ô tô và dụng cụ bơm hơi.",
-    image: "/src/assets/images/MayBomLop.png",
+    image: "/images/MayBomLop.png",
   },
   {
     id: "battery",
     name: "Pin cúc áo CR2032",
     description: "Pin cúc áo CR2032 chất lượng cao, dung lượng ổn định, sử dụng cho thiết bị điện tử, đồng hồ và remote.",
-    image: "/src/assets/images/Pin.png",
+    image: "/images/Pin.png",
   },
   {
     id: "kitchen",
     name: "Dụng cụ nhà bếp",
     description: "Dụng cụ nhà bếp thiết yếu từ kim loại, nhựa và vật liệu tổng hợp, đạt chuẩn an toàn thực phẩm.",
-    image: "/src/assets/images/DungCuNhaBep.png",
+    image: "/images/DungCuNhaBep.png",
   },
 ];
 
@@ -158,16 +158,16 @@ export const qualityItems = [
 ];
 
 export const factoryGallery = [
-  { src: "/src/assets/images/slide-1.png", alt: "Toàn cảnh dây chuyền sản xuất tại Xưởng Gia Dụng Thiên Phát" },
-  { src: "/src/assets/images/slide-2.png", alt: "Khu vực gia công sản phẩm gia dụng" },
-  { src: "/src/assets/images/slide-3.png", alt: "Dây chuyền sản xuất và công nhân vận hành máy móc" },
-  { src: "/src/assets/images/slide-4.png", alt: "Khu vực lắp ráp và hoàn thiện sản phẩm" },
-  { src: "/src/assets/images/slide-5.png", alt: "Công nhân kiểm tra chất lượng sản phẩm" },
-  { src: "/src/assets/images/slide-6.png", alt: "Khu vực đóng gói thành phẩm" },
-  { src: "/src/assets/images/slide-7.png", alt: "Máy móc và thiết bị sản xuất hiện đại" },
-  { src: "/src/assets/images/slide-8.png", alt: "Nguyên vật liệu được sắp xếp trong kho xưởng" },
-  { src: "/src/assets/images/slide-9.png", alt: "Thành phẩm gia dụng trước khi xuất xưởng" },
-  { src: "/src/assets/images/slide-10.png", alt: "Toàn cảnh khu vực sản xuất và đóng gói" },
+  { src: "/images/slide-1.png", alt: "Toàn cảnh dây chuyền sản xuất tại Xưởng Gia Dụng Thiên Phát" },
+  { src: "/images/slide-2.png", alt: "Khu vực gia công sản phẩm gia dụng" },
+  { src: "/images/slide-3.png", alt: "Dây chuyền sản xuất và công nhân vận hành máy móc" },
+  { src: "/images/slide-4.png", alt: "Khu vực lắp ráp và hoàn thiện sản phẩm" },
+  { src: "/images/slide-5.png", alt: "Công nhân kiểm tra chất lượng sản phẩm" },
+  { src: "/images/slide-6.png", alt: "Khu vực đóng gói thành phẩm" },
+  { src: "/images/slide-7.png", alt: "Máy móc và thiết bị sản xuất hiện đại" },
+  { src: "/images/slide-8.png", alt: "Nguyên vật liệu được sắp xếp trong kho xưởng" },
+  { src: "/images/slide-9.png", alt: "Thành phẩm gia dụng trước khi xuất xưởng" },
+  { src: "/images/slide-10.png", alt: "Toàn cảnh khu vực sản xuất và đóng gói" },
 ];
 
 export const oemContent = {
@@ -219,7 +219,7 @@ export const contactInfo = {
 };
 
 export const placeholderImages = {
-  hero: "/src/assets/images/factory-hero.png",
-  about: "/src/assets/images/factory-overview.svg",
-  capability: "/src/assets/images/production-line.svg",
+  hero: "/images/factory-hero.png",
+  about: "/images/factory-overview.svg",
+  capability: "/images/production-line.svg",
 };
