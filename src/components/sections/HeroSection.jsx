@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -18,9 +18,6 @@ const slides = [
 export default function HeroSection() {
   const [current, setCurrent] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
-  const [touchX, setTouchX] = useState(null);
-  const [paused, setPaused] = useState(false);
-  const timerRef = useRef(null);
 
   const goTo = useCallback((index) => {
     setCurrent((index + slides.length) % slides.length);
@@ -29,88 +26,34 @@ export default function HeroSection() {
   const next = useCallback(() => goTo(current + 1), [current, goTo]);
   const prev = useCallback(() => goTo(current - 1), [current, goTo]);
 
-  // Auto-play timer
-  useEffect(() => {
-    if (paused) return;
-    timerRef.current = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 4000);
-    return () => clearInterval(timerRef.current);
-  }, [paused]);
-
-  // Reset timer on manual interaction
-  const resetTimer = () => {
-    clearInterval(timerRef.current);
-    if (!paused) {
-      timerRef.current = setInterval(() => {
-        setCurrent((prev) => (prev + 1) % slides.length);
-      }, 4000);
-    }
-  };
-
-  const handleGoTo = (index) => {
-    resetTimer();
-    goTo(index);
-  };
-
-  const handleNext = () => {
-    resetTimer();
-    next();
-  };
-
-  const handlePrev = () => {
-    resetTimer();
-    prev();
-  };
-
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (mq.matches) setPaused(true);
-    const handler = (e) => { if (e.matches) setPaused(true); };
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, []);
-
   useEffect(() => {
     const handleKey = (e) => {
-      if (e.key === "ArrowLeft") handlePrev();
-      if (e.key === "ArrowRight") handleNext();
+      if (e.key === "ArrowLeft") prev();
+      if (e.key === "ArrowRight") next();
     };
     document.addEventListener("keydown", handleKey);
     return () => document.removeEventListener("keydown", handleKey);
-  }, [handlePrev, handleNext]);
+  }, [prev, next]);
 
   const handleTouchStart = (e) => {
     setTouchStart(e.touches[0].clientX);
-    setTouchX(e.touches[0].clientX);
-  };
-
-  const handleTouchMove = (e) => {
-    setTouchX(e.touches[0].clientX);
   };
 
   const handleTouchEnd = (e) => {
     if (touchStart === null) return;
     const diff = touchStart - e.changedTouches[0].clientX;
     if (Math.abs(diff) > 40) {
-      if (diff > 0) handleNext();
-      else handlePrev();
+      if (diff > 0) next();
+      else prev();
     }
     setTouchStart(null);
-    setTouchX(null);
   };
-
-  const pause = () => setPaused(true);
-  const resume = () => setPaused(false);
 
   return (
     <section
       id="hero"
       className="relative h-[85svh] mt-[112px] md:min-h-[92svh] md:mt-[80px] overflow-hidden bg-[#0f0e12]"
-      onMouseEnter={pause}
-      onMouseLeave={resume}
       onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
       {/* Image container */}
@@ -148,16 +91,16 @@ export default function HeroSection() {
 
       {/* Arrows - hidden on mobile (swipe instead) */}
       <button
-        onClick={handlePrev}
+        onClick={prev}
         aria-label="Ảnh trước"
-        className="hidden md:flex absolute left-[24px] top-1/2 -translate-y-1/2 z-10 w-[48px] h-[48px] items-center justify-center rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-all"
+        className="flex absolute left-[12px] md:left-[24px] top-1/2 -translate-y-1/2 z-10 w-[44px] h-[44px] items-center justify-center rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-all"
       >
         <ChevronLeft size={28} strokeWidth={1.5} />
       </button>
       <button
-        onClick={handleNext}
+        onClick={next}
         aria-label="Ảnh tiếp theo"
-        className="hidden md:flex absolute right-[24px] top-1/2 -translate-y-1/2 z-10 w-[48px] h-[48px] items-center justify-center rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-all"
+        className="flex absolute right-[12px] md:right-[24px] top-1/2 -translate-y-1/2 z-10 w-[44px] h-[44px] items-center justify-center rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-all"
       >
         <ChevronRight size={28} strokeWidth={1.5} />
       </button>
@@ -175,7 +118,7 @@ export default function HeroSection() {
             {slides.map((_, i) => (
               <button
                 key={i}
-                onClick={() => handleGoTo(i)}
+                onClick={() => goTo(i)}
                 aria-label={`Ảnh ${i + 1}`}
                 className="min-w-[44px] min-h-[44px] flex items-center justify-center bg-transparent border-none cursor-pointer"
               >
